@@ -32,7 +32,7 @@ cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
 echo
-echo $CL_YLW" (                 (                         "
+echo -e $CL_YLW" (                 (                         "
 echo " )\ ) (            )\ )         )            "
 echo "(()/( )\(     )   (()/(    ) ( /(    (  (    "
 echo " /(_)|(_)\   (     /(_))( /( )\())  ))\ )(   "
@@ -41,11 +41,11 @@ echo "/ __|| |(_)_((_)) / __|((_)_| |(_)(_))  ((_) "
 echo "\__ \| || | '  \()\__ \/ _' | '_ \/ -_)| '_| "
 echo "|___/|_||_|_|_|_| |___/\__,_|_.__/\___||_|   "
 echo
-echo $CL_CYN"===========-Package complete-==========="$CL_RST
-echo $CL_CYN"zip :"$CL_MAG" $OUTFILE"$CL_RST
-echo $CL_CYN"md5 :"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo $CL_CYN"size:"$CL_MAG" $ZIPSIZE"$CL_RST
-echo $CL_CYN"========================================"$CL_RST
+echo -e $CL_CYN"===========-Package complete-==========="$CL_RST
+echo -e $CL_CYN"zip :"$CL_MAG" $OUTFILE"$CL_RST
+echo -e $CL_CYN"md5 :"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo -e $CL_CYN"size:"$CL_MAG" $ZIPSIZE"$CL_RST
+echo -e $CL_CYN"========================================"$CL_RST
 )
 
 exit 0
